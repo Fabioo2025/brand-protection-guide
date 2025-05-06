@@ -1,20 +1,22 @@
 
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+
 const Testimonials = () => {
   const testimonials = [
     {
       quote: "O guia é super didático! Consegui registrar a marca do meu ateliê. Vale cada centavo!",
       author: "Fernanda M., São Paulo/SP",
-      avatar: "https://via.placeholder.com/60?text=FM"
+      avatar: "/lovable-uploads/b86c2ba6-47da-45dc-be0f-c896e6b92f61.png"
     },
     {
       quote: "Sempre achei que só advogado resolvia isso. Depois do ebook, fiz tudo sozinho e deu certo!",
       author: "Carlos Henrique, Belo Horizonte/MG",
-      avatar: "https://via.placeholder.com/60?text=CH"
+      avatar: "/lovable-uploads/1e985435-a3fe-419f-9443-7d3928f5163a.png"
     },
     {
       quote: "Muito melhor que os vídeos que vi no YouTube. O conteúdo é claro e direto!",
       author: "Aline Torres, Recife/PE",
-      avatar: "https://via.placeholder.com/60?text=AT"
+      avatar: "/lovable-uploads/4290f0fd-fc17-4e1d-8a5f-89ecb8df1f7e.png"
     }
   ];
 
@@ -39,11 +41,12 @@ const Testimonials = () => {
                   🗣️ <em>{testimonial.quote}</em>
                 </p>
                 <div className="flex items-center">
-                  <img 
-                    src={testimonial.avatar} 
-                    alt={`Avatar de ${testimonial.author}`} 
-                    className="h-12 w-12 rounded-full mr-4 border-2 border-brand-blue-100"
-                  />
+                  <Avatar className="h-12 w-12 border-2 border-brand-blue-100 mr-4">
+                    <AvatarImage src={testimonial.avatar} alt={`Avatar de ${testimonial.author}`} />
+                    <AvatarFallback className="bg-brand-blue-100 text-brand-blue-800">
+                      {testimonial.author.split(',')[0].substring(0, 2)}
+                    </AvatarFallback>
+                  </Avatar>
                   <p className="font-semibold text-brand-blue-900">
                     <strong>— {testimonial.author}</strong>
                   </p>
