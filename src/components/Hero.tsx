@@ -18,7 +18,7 @@ const Hero = () => {
           <div className="space-y-6">
             <span className="inline-block bg-brand-blue-700 text-white px-4 py-1 rounded-full text-sm font-medium">GUIA PRÁTICO</span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              ✅ Evite Perder o Nome da Sua Empresa!
+              Evite Perder o Nome da Sua Empresa!
             </h1>
             <h2 className="text-xl md:text-2xl font-medium text-brand-blue-200">
               Aprenda como registrar sua marca de forma rápida, prática e legal com este guia definitivo.
@@ -38,12 +38,33 @@ const Hero = () => {
           <div className="flex justify-center">
             <div className="relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-brand-blue-400 to-brand-orange rounded-lg blur opacity-30"></div>
-              <div className="relative">
-                <img 
-                  src="https://via.placeholder.com/600x800?text=Ebook+Registro+de+Marca" 
-                  alt="Guia Prático: Registro de Marca no Brasil" 
-                  className="rounded-lg shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 max-w-full h-auto"
-                />
+              <div className="relative transform hover:scale-105 transition-all duration-500">
+                <div className="ipad-mockup bg-black rounded-[36px] p-3 rotate-3 shadow-2xl">
+                  {/* iPad Frame */}
+                  <div className="relative bg-black rounded-[28px] pt-[35px] pb-[45px] px-[10px] border-[10px] border-gray-800 shadow-inner">
+                    {/* iPad Screen */}
+                    <div className="relative bg-gradient-to-br from-brand-blue-900 to-brand-blue-950 overflow-hidden rounded-lg aspect-[3/4] flex items-center justify-center">
+                      {/* Ebook Cover */}
+                      <div className="p-4 text-center w-full h-full flex flex-col items-center justify-between bg-gradient-to-br from-brand-blue-900 via-brand-blue-900 to-brand-blue-700">
+                        <div className="bg-brand-orange px-4 py-1 rounded-full text-white text-xs md:text-sm font-bold mb-4 mt-8">
+                          EBOOK COMPLETO
+                        </div>
+                        <div className="flex-1 flex items-center justify-center">
+                          <h3 className="text-xl md:text-3xl font-bold text-white text-center mb-2">
+                            Guia Prático:<br />
+                            <span className="text-brand-orange">Registro de Marca</span><br />
+                            no Brasil
+                          </h3>
+                        </div>
+                        <div className="mb-8 border-t border-white/20 w-2/3 pt-4">
+                          <p className="text-xs md:text-sm text-white/80">O caminho seguro para proteger sua identidade</p>
+                        </div>
+                      </div>
+                    </div>
+                    {/* iPad Home Button */}
+                    <div className="absolute bottom-[10px] left-1/2 transform -translate-x-1/2 w-[14px] h-[14px] rounded-full border-2 border-gray-600"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

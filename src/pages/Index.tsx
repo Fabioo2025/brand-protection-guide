@@ -13,7 +13,9 @@ const Index = () => {
       <WhyRegister />
       <Solution />
       <Testimonials />
-      <Pricing />
+      <div id="checkout">
+        <Pricing />
+      </div>
       <Footer />
     </div>
   );
