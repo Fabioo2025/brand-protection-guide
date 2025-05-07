@@ -62,7 +62,7 @@ const Solution = () => {
               </li>
             </ul>
             
-            <div className="pt-2">
+            <div className="pt-2 flex justify-center">
               <Button 
                 onClick={scrollToCheckout}
                 className="bg-brand-orange hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-lg transition-all transform hover:scale-105"
