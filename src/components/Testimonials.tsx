@@ -31,7 +31,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className="bg-white border border-gray-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow relative"
+              className="bg-white border border-gray-100 p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow relative"
             >
               <div className="absolute -top-5 left-8">
                 <span className="text-5xl text-brand-blue-500">"</span>
@@ -47,7 +47,7 @@ const Testimonials = () => {
                       {testimonial.author.split(',')[0].substring(0, 2)}
                     </AvatarFallback>
                   </Avatar>
-                  <p className="font-semibold text-brand-blue-900">
+                  <p className="font-semibold text-brand-blue-900 text-sm md:text-base">
                     <strong>— {testimonial.author}</strong>
                   </p>
                 </div>

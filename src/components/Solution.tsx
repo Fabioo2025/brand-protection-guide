@@ -1,8 +1,11 @@
 
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Solution = () => {
+  const isMobile = useIsMobile();
+  
   const scrollToCheckout = () => {
     const checkoutSection = document.getElementById("checkout");
     if (checkoutSection) {
@@ -13,15 +16,8 @@ const Solution = () => {
   return (
     <section className="py-16 md:py-24 bg-gray-50">
       <div className="container max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <img 
-              src="https://via.placeholder.com/600x400?text=Conteudo+do+ebook" 
-              alt="Conteúdo do ebook de registro de marca" 
-              className="rounded-lg shadow-lg"
-            />
-          </div>
-          <div>
+        <div className="flex flex-col items-center">
+          <div className="w-full max-w-3xl">
             <h2 className="text-3xl md:text-4xl font-bold text-brand-blue-950 mb-6">
               📘 A Solução Está Aqui
             </h2>

@@ -3,10 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Check, ShoppingCart } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Pricing = () => {
   const { toast } = useToast();
   const [isProcessing, setIsProcessing] = useState(false);
+  const isMobile = useIsMobile();
 
   const handlePurchase = () => {
     setIsProcessing(true);
@@ -68,33 +70,23 @@ const Pricing = () => {
                   <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                   <span>Lista de verificação para evitar erros comuns</span>
                 </div>
-                <div className="flex items-start">
-                  <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Atualizações gratuitas por 12 meses</span>
-                </div>
               </div>
               
               <Button 
                 onClick={handlePurchase}
                 disabled={isProcessing}
-                className="w-full bg-brand-orange hover:bg-opacity-90 text-white font-medium text-lg px-8 py-6 rounded-lg transition-all"
+                className="w-full bg-brand-orange hover:bg-opacity-90 text-white font-medium text-lg px-4 py-6 rounded-lg transition-all"
               >
                 {isProcessing ? "Processando..." : (
                   <>
                     <ShoppingCart className="mr-2 h-5 w-5" />
-                    Quero registrar minha marca agora!
+                    {isMobile ? "Comprar agora" : "Quero registrar minha marca"}
                   </>
                 )}
               </Button>
               
               <p className="text-center text-sm text-gray-500 mt-4">
                 Pagamento 100% seguro via PIX, cartão de crédito ou boleto
-              </p>
-            </div>
-            
-            <div className="bg-gray-50 px-8 py-4 text-center">
-              <p className="text-gray-600">
-                <strong>Garantia de 7 dias</strong> ou seu dinheiro de volta, sem perguntas.
               </p>
             </div>
           </div>
