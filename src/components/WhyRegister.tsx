@@ -18,33 +18,33 @@ const WhyRegister = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 rounded-xl border border-gray-100 shadow-md hover:shadow-xl transition-shadow">
-            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-brand-blue-100 text-brand-blue-800 mb-6 mx-auto">
+          <div className="bg-white p-8 rounded-xl border border-gray-100 shadow-md hover-lift group">
+            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-br from-brand-blue-100 to-brand-blue-200 text-brand-blue-800 mb-6 mx-auto group-hover:scale-110 transition-transform">
               <Shield className="h-8 w-8" />
             </div>
-            <h3 className="text-xl font-semibold text-brand-blue-900 text-center mb-4">Proteção Legal</h3>
-            <p className="text-gray-600 text-center">
-              Garanta exclusividade sobre o uso da sua marca em todo o território nacional.
+            <h3 className="text-xl font-semibold text-brand-blue-900 text-center mb-4">🛡️ Proteção Legal</h3>
+            <p className="text-gray-600 text-center leading-relaxed">
+              Garanta exclusividade sobre o uso da sua marca em todo o território nacional por <strong>10 anos renováveis</strong>.
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-xl border border-gray-100 shadow-md hover:shadow-xl transition-shadow">
-            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-brand-blue-100 text-brand-blue-800 mb-6 mx-auto">
+          <div className="bg-white p-8 rounded-xl border border-gray-100 shadow-md hover-lift group">
+            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-br from-red-100 to-red-200 text-red-700 mb-6 mx-auto group-hover:scale-110 transition-transform">
               <AlertTriangle className="h-8 w-8" />
             </div>
-            <h3 className="text-xl font-semibold text-brand-blue-900 text-center mb-4">Evite Problemas</h3>
-            <p className="text-gray-600 text-center">
-              Previna-se contra processos por uso indevido de marca e evite ter que rebrandear todo seu negócio.
+            <h3 className="text-xl font-semibold text-brand-blue-900 text-center mb-4">⚠️ Evite Problemas</h3>
+            <p className="text-gray-600 text-center leading-relaxed">
+              Previna-se contra processos por uso indevido de marca e evite ter que rebrandear todo seu negócio e <strong>perder clientes</strong>.
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-xl border border-gray-100 shadow-md hover:shadow-xl transition-shadow">
-            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-brand-blue-100 text-brand-blue-800 mb-6 mx-auto">
+          <div className="bg-white p-8 rounded-xl border border-gray-100 shadow-md hover-lift group">
+            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-br from-green-100 to-green-200 text-green-700 mb-6 mx-auto group-hover:scale-110 transition-transform">
               <Zap className="h-8 w-8" />
             </div>
-            <h3 className="text-xl font-semibold text-brand-blue-900 text-center mb-4">Valor ao Negócio</h3>
-            <p className="text-gray-600 text-center">
-              Aumente o patrimônio da sua empresa e ganhe credibilidade no mercado com uma marca registrada.
+            <h3 className="text-xl font-semibold text-brand-blue-900 text-center mb-4">💰 Valor ao Negócio</h3>
+            <p className="text-gray-600 text-center leading-relaxed">
+              Aumente o patrimônio da sua empresa e ganhe credibilidade no mercado. <strong>Uma marca pode valer milhões!</strong>
             </p>
           </div>
         </div>

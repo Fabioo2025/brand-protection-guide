@@ -25,11 +25,18 @@ const Pricing = () => {
   };
 
   return (
-    <section id="checkout" className="py-16 md:py-24 bg-brand-blue-950 text-white">
-      <div className="container max-w-6xl mx-auto px-6">
+    <section id="checkout" className="py-16 md:py-24 bg-gradient-to-br from-brand-blue-950 via-brand-blue-900 to-brand-blue-800 text-white relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute top-10 left-20 w-40 h-40 bg-brand-orange/5 rounded-full blur-3xl animate-bounce-soft"></div>
+      <div className="absolute bottom-20 right-20 w-60 h-60 bg-brand-blue-400/5 rounded-full blur-3xl animate-bounce-soft" style={{ animationDelay: '2s' }}></div>
+      
+      <div className="container max-w-6xl mx-auto px-6 relative z-10">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">💰 Oferta Especial</h2>
+            <div className="inline-block bg-gradient-to-r from-red-500 to-brand-orange px-4 py-2 rounded-full text-white text-sm font-bold mb-4 animate-pulse-glow">
+              🔥 ÚLTIMAS VAGAS COM DESCONTO
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">💰 Oferta Especial Limitada</h2>
             <p className="text-lg text-brand-blue-100 mb-2">
               Este material é fruto de anos de experiência, pesquisa e prática direta no sistema do INPI.
             </p>
@@ -38,7 +45,11 @@ const Pricing = () => {
             </p>
           </div>
           
-          <div className="bg-white text-gray-800 rounded-2xl overflow-hidden shadow-2xl border-t-8 border-brand-orange">
+          <div className="bg-white text-gray-800 rounded-2xl overflow-hidden shadow-2xl border-t-8 border-brand-orange relative animate-slide-in-up">
+            {/* Guarantee badge */}
+            <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold transform rotate-12">
+              ✅ GARANTIA 7 DIAS
+            </div>
             <div className="p-8 md:p-12">
               <div className="flex flex-col md:flex-row justify-between items-center mb-8">
                 <div>
@@ -58,29 +69,37 @@ const Pricing = () => {
               </div>
               
               <div className="space-y-4 mb-8">
-                <div className="flex items-start">
+                <div className="flex items-start p-3 bg-green-50 rounded-lg">
                   <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Acesso imediato ao e-book completo em formato PDF</span>
+                  <span className="font-medium">📖 Acesso imediato ao e-book completo em formato PDF (50+ páginas)</span>
                 </div>
-                <div className="flex items-start">
+                <div className="flex items-start p-3 bg-blue-50 rounded-lg">
                   <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Modelos de documentos necessários para o processo</span>
+                  <span className="font-medium">📄 Modelos de documentos e formulários necessários</span>
                 </div>
-                <div className="flex items-start">
+                <div className="flex items-start p-3 bg-yellow-50 rounded-lg">
                   <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Lista de verificação para evitar erros comuns</span>
+                  <span className="font-medium">✅ Lista de verificação para evitar erros fatais</span>
+                </div>
+                <div className="flex items-start p-3 bg-purple-50 rounded-lg">
+                  <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="font-medium">🎁 <strong>BÔNUS:</strong> Checklist de 10 pontos antes do registro</span>
+                </div>
+                <div className="flex items-start p-3 bg-red-50 rounded-lg">
+                  <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="font-medium">🛡️ <strong>BÔNUS:</strong> Garantia de 7 dias - 100% do dinheiro de volta</span>
                 </div>
               </div>
               
               <Button 
                 onClick={handlePurchase}
                 disabled={isProcessing}
-                className="w-full bg-brand-orange hover:bg-opacity-90 text-white font-medium text-lg px-4 py-6 rounded-lg transition-all"
+                className="w-full bg-gradient-to-r from-brand-orange to-red-500 hover:from-red-500 hover:to-brand-orange text-white font-bold text-lg px-4 py-6 rounded-xl transition-all transform hover:scale-105 shadow-2xl pulse-glow"
               >
                 {isProcessing ? "Processando..." : (
                   <>
                     <ShoppingCart className="mr-2 h-5 w-5" />
-                    {isMobile ? "Comprar agora" : "Quero registrar minha marca"}
+                    {isMobile ? "🚀 COMPRAR AGORA" : "🚀 QUERO PROTEGER MINHA MARCA AGORA"}
                   </>
                 )}
               </Button>
