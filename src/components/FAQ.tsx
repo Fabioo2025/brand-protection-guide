@@ -48,7 +48,7 @@ const FAQ = () => {
               className="bg-white border border-gray-200 rounded-lg px-6"
             >
               <AccordionTrigger className="text-left hover:no-underline">
-                {faq.question}
+                <span className="font-semibold text-brand-blue-900">{faq.question}</span>
               </AccordionTrigger>
               <AccordionContent className="text-gray-700 pb-4">
                 {faq.answer}
