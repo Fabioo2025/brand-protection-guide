@@ -1,27 +1,26 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Clock, Shield } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import EbookPreview from "@/components/EbookPreview";
 import LeadForm from "@/components/LeadForm";
-
 const Hero = () => {
   const isMobile = useIsMobile();
-
   const scrollToCheckout = () => {
     const checkoutSection = document.getElementById("checkout");
     if (checkoutSection) {
-      checkoutSection.scrollIntoView({ behavior: "smooth" });
+      checkoutSection.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-brand-blue-950 via-brand-blue-900 to-brand-blue-800 text-white">
+  return <section className="relative overflow-hidden bg-gradient-to-br from-brand-blue-950 via-brand-blue-900 to-brand-blue-800 text-white">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyNTI2MjciIGZpbGwtb3BhY2l0eT0iMC40Ij48cGF0aCBkPSJNMzYgMzRjMC0xLjEuOS0yIDItMmgzLjhjLjUgMCAuOS40LjkuOSAwIC41LS40LjktLjkuOUgyMHYtMmgtMi4yYy0uNSAwLS45LjQtLjkuOSAwIC41LjQuOS45LjlIMzZWMzR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-10"></div>
       
       {/* Floating elements for visual appeal */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-brand-orange/10 rounded-full blur-xl animate-bounce-soft"></div>
-      <div className="absolute bottom-20 right-10 w-32 h-32 bg-brand-blue-400/10 rounded-full blur-xl animate-bounce-soft" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute bottom-20 right-10 w-32 h-32 bg-brand-blue-400/10 rounded-full blur-xl animate-bounce-soft" style={{
+      animationDelay: '1s'
+    }}></div>
       
       <div className="container max-w-6xl mx-auto px-4 py-12 md:px-6 md:py-16 lg:py-24">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -51,10 +50,7 @@ const Hero = () => {
                 <Clock className="h-4 w-4 mr-2 text-blue-400" />
                 <span>Método em 7 dias</span>
               </div>
-              <div className="flex items-center bg-white/10 rounded-full px-3 py-2">
-                <Shield className="h-4 w-4 mr-2 text-yellow-400" />
-                <span>Garantia 7 dias</span>
-              </div>
+              
             </div>
             
             <div className="space-y-4">
@@ -63,10 +59,7 @@ const Hero = () => {
             </div>
             
             <div className="pt-2 md:pt-4">
-              <Button 
-                onClick={scrollToCheckout}
-                className="bg-gradient-to-r from-brand-orange to-red-500 hover:from-red-500 hover:to-brand-orange text-white font-bold text-base md:text-lg px-6 md:px-10 py-4 md:py-6 rounded-xl transition-all transform hover:scale-105 w-full md:w-auto shadow-2xl pulse-glow"
-              >
+              <Button onClick={scrollToCheckout} className="bg-gradient-to-r from-brand-orange to-red-500 hover:from-red-500 hover:to-brand-orange text-white font-bold text-base md:text-lg px-6 md:px-10 py-4 md:py-6 rounded-xl transition-all transform hover:scale-105 w-full md:w-auto shadow-2xl pulse-glow">
                 {isMobile ? "🚀 Quero proteger minha marca" : "🚀 Quero proteger minha marca agora!"} <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
               </Button>
             </div>
@@ -106,8 +99,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
