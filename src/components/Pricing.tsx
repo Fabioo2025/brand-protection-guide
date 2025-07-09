@@ -85,10 +85,6 @@ const Pricing = () => {
                   <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                   <span className="font-medium">🎁 <strong>BÔNUS:</strong> Checklist de 10 pontos antes do registro</span>
                 </div>
-                <div className="flex items-start p-3 bg-red-50 rounded-lg">
-                  <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="font-medium">🛡️ <strong>BÔNUS:</strong> Garantia de 7 dias - 100% do dinheiro de volta</span>
-                </div>
               </div>
               
               <Button 

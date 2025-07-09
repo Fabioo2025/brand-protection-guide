@@ -26,10 +26,6 @@ const FAQ = () => {
     {
       question: "Quanto custa registrar uma marca no INPI?",
       answer: "As taxas do INPI variam conforme o tipo de empresa (MEI, pequena empresa, etc.). O guia detalha todas as taxas atualizadas e como economizar."
-    },
-    {
-      question: "O ebook tem garantia?",
-      answer: "Sim! Oferecemos 7 dias de garantia total. Se não ficar satisfeito, devolvemos 100% do seu dinheiro sem perguntas."
     }
   ];
 
