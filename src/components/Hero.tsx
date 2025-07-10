@@ -3,6 +3,7 @@ import { ArrowRight, Users, Clock, Shield } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import EbookPreview from "@/components/EbookPreview";
 import LeadForm from "@/components/LeadForm";
+import ebookCover from "@/assets/ebook-cover-hq.png";
 const Hero = () => {
   const isMobile = useIsMobile();
   const scrollToCheckout = () => {
@@ -76,7 +77,7 @@ const Hero = () => {
                       {/* Ebook Cover */}
                       <div className="w-full h-full">
                         <img 
-                          src="/lovable-uploads/a35e7b1b-9593-4f3e-972d-6de3849e5e51.png"
+                          src={ebookCover}
                           alt="Guia Completo: Registro de Marca no Brasil"
                           className="w-full h-full object-cover rounded-lg"
                         />
