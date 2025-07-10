@@ -12,8 +12,10 @@ const Footer = () => {
           <p className="text-gray-700 mb-4">
             Imagina ver sua identidade, seu nome, sua ideia... registrada por outra pessoa?
           </p>
+          <p className="text-gray-700 mb-3">
+            Garanta agora o controle da sua marca com um investimento acessível.
+          </p>
           <p className="text-gray-700">
-            Garanta agora o controle da sua marca com um investimento acessível.<br />
             📘 <strong>O primeiro passo começa clicando no botão acima.</strong>
           </p>
         </div>
