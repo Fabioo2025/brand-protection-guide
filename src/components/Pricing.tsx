@@ -70,7 +70,7 @@ const Pricing = () => {
               <div className="space-y-4 mb-8">
                 <div className="flex items-start p-3 bg-green-50 rounded-lg">
                   <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="font-medium">📖 Acesso imediato ao e-book completo em formato PDF (50+ páginas)</span>
+                  <span className="font-medium">📖 Acesso imediato ao e-book completo em formato PDF </span>
                 </div>
                 <div className="flex items-start p-3 bg-blue-50 rounded-lg">
                   <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
