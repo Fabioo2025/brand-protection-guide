@@ -74,20 +74,12 @@ const Hero = () => {
                     {/* iPad Screen */}
                     <div className="relative bg-gradient-to-br from-brand-blue-900 to-brand-blue-950 overflow-hidden rounded-lg aspect-[3/4] flex items-center justify-center">
                       {/* Ebook Cover */}
-                      <div className="p-3 md:p-4 text-center w-full h-full flex flex-col items-center justify-between bg-gradient-to-br from-brand-blue-900 via-brand-blue-900 to-brand-blue-700">
-                        <div className="bg-brand-orange px-3 py-1 rounded-full text-white text-xs font-bold mb-2 md:mb-4 mt-6 md:mt-8">
-                          EBOOK COMPLETO
-                        </div>
-                        <div className="flex-1 flex items-center justify-center">
-                          <h3 className="text-base sm:text-lg md:text-xl lg:text-3xl font-bold text-white text-center mb-2">
-                            Guia Prático:<br />
-                            <span className="text-brand-orange">Registro de Marca</span><br />
-                            no Brasil
-                          </h3>
-                        </div>
-                        <div className="mb-6 md:mb-8 border-t border-white/20 w-2/3 pt-3 md:pt-4">
-                          <p className="text-xs md:text-sm text-white/80">O caminho seguro para proteger sua identidade</p>
-                        </div>
+                      <div className="w-full h-full">
+                        <img 
+                          src="/lovable-uploads/a35e7b1b-9593-4f3e-972d-6de3849e5e51.png"
+                          alt="Guia Completo: Registro de Marca no Brasil"
+                          className="w-full h-full object-cover rounded-lg"
+                        />
                       </div>
                     </div>
                     {/* iPad Home Button */}
