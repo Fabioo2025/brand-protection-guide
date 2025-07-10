@@ -38,7 +38,7 @@ const Testimonials = () => {
               </div>
               <div className="pt-4">
                 <p className="text-gray-700 italic mb-6">
-                  🗣️ <em>{testimonial.quote}</em>
+                  <em>{testimonial.quote}</em>
                 </p>
                 <div className="flex items-center">
                   <Avatar className="h-12 w-12 border-2 border-brand-blue-100 mr-4">
