@@ -1,34 +1,33 @@
-
 import { Button } from "@/components/ui/button";
 import { Check, ShoppingCart } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useIsMobile } from "@/hooks/use-mobile";
-
 const Pricing = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [isProcessing, setIsProcessing] = useState(false);
   const isMobile = useIsMobile();
-
   const handlePurchase = () => {
     setIsProcessing(true);
-    
+
     // Simulate payment processing
     setTimeout(() => {
       setIsProcessing(false);
       toast({
         title: "Compra simulada com sucesso!",
         description: "Este é um exemplo de compra. Para implementar o Stripe, será necessário configurar uma conta.",
-        variant: "default",
+        variant: "default"
       });
     }, 1500);
   };
-
-  return (
-    <section id="checkout" className="py-16 md:py-24 bg-gradient-to-br from-brand-blue-950 via-brand-blue-900 to-brand-blue-800 text-white relative overflow-hidden">
+  return <section id="checkout" className="py-16 md:py-24 bg-gradient-to-br from-brand-blue-950 via-brand-blue-900 to-brand-blue-800 text-white relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute top-10 left-20 w-40 h-40 bg-brand-orange/5 rounded-full blur-3xl animate-bounce-soft"></div>
-      <div className="absolute bottom-20 right-20 w-60 h-60 bg-brand-blue-400/5 rounded-full blur-3xl animate-bounce-soft" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute bottom-20 right-20 w-60 h-60 bg-brand-blue-400/5 rounded-full blur-3xl animate-bounce-soft" style={{
+      animationDelay: '2s'
+    }}></div>
       
       <div className="container max-w-6xl mx-auto px-6 relative z-10">
         <div className="max-w-3xl mx-auto">
@@ -79,7 +78,7 @@ const Pricing = () => {
                 </div>
                 <div className="flex items-start p-3 bg-yellow-50 rounded-lg">
                   <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="font-medium">✅ Lista de verificação para evitar erros fatais</span>
+                  <span className="font-medium">✅ Lista de verificação para evitar erros comuns</span>
                 </div>
                 <div className="flex items-start p-3 bg-purple-50 rounded-lg">
                   <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
@@ -87,17 +86,11 @@ const Pricing = () => {
                 </div>
               </div>
               
-              <Button 
-                onClick={handlePurchase}
-                disabled={isProcessing}
-                className="w-full bg-gradient-to-r from-brand-orange to-red-500 hover:from-red-500 hover:to-brand-orange text-white font-bold text-lg px-4 py-6 rounded-xl transition-all transform hover:scale-105 shadow-2xl pulse-glow"
-              >
-                {isProcessing ? "Processando..." : (
-                  <>
+              <Button onClick={handlePurchase} disabled={isProcessing} className="w-full bg-gradient-to-r from-brand-orange to-red-500 hover:from-red-500 hover:to-brand-orange text-white font-bold text-lg px-4 py-6 rounded-xl transition-all transform hover:scale-105 shadow-2xl pulse-glow">
+                {isProcessing ? "Processando..." : <>
                     <ShoppingCart className="mr-2 h-5 w-5" />
                     {isMobile ? "🚀 COMPRAR AGORA" : "🚀 QUERO PROTEGER MINHA MARCA AGORA"}
-                  </>
-                )}
+                  </>}
               </Button>
               
               <p className="text-center text-sm text-gray-500 mt-4">
@@ -107,8 +100,6 @@ const Pricing = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Pricing;
