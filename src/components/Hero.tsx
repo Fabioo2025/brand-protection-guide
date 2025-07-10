@@ -60,7 +60,7 @@ const Hero = () => {
             
             <div className="pt-2 md:pt-4">
               <Button onClick={scrollToCheckout} className="bg-gradient-to-r from-brand-orange to-red-500 hover:from-red-500 hover:to-brand-orange text-white font-bold text-base md:text-lg px-6 md:px-10 py-4 md:py-6 rounded-xl transition-all transform hover:scale-105 w-full md:w-auto shadow-2xl pulse-glow">
-                {isMobile ? "🚀 Quero proteger minha marca" : "🚀 Quero proteger minha marca agora!"} <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
+                {isMobile ? "🚀 Quero proteger minha marca" : "🚀 Quero proteger minha marca agora!"}
               </Button>
             </div>
           </div>
