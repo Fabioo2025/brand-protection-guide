@@ -28,13 +28,9 @@ const LeadForm = () => {
       setName("");
     }, 1500);
   };
-  return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+  return <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
-        <Button variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20 w-full md:w-auto">
-          <Gift className="mr-2 h-4 w-4" />
-          🎁 Baixar Checklist Gratuito
-        </Button>
+        
       </DialogTrigger>
       <DialogContent className="max-w-md">
         <div className="text-center space-y-4">
@@ -51,30 +47,12 @@ const LeadForm = () => {
         
         <form onSubmit={handleSubmit} className="space-y-4 mt-6">
           <div>
-            <Input
-              type="text"
-              placeholder="Seu nome completo"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-              className="w-full"
-            />
+            <Input type="text" placeholder="Seu nome completo" value={name} onChange={e => setName(e.target.value)} required className="w-full" />
           </div>
           <div>
-            <Input
-              type="email"
-              placeholder="Seu melhor email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="w-full"
-            />
+            <Input type="email" placeholder="Seu melhor email" value={email} onChange={e => setEmail(e.target.value)} required className="w-full" />
           </div>
-          <Button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full bg-gradient-to-r from-brand-orange to-red-500 hover:from-red-500 hover:to-brand-orange text-white font-bold"
-          >
+          <Button type="submit" disabled={isSubmitting} className="w-full bg-gradient-to-r from-brand-orange to-red-500 hover:from-red-500 hover:to-brand-orange text-white font-bold">
             {isSubmitting ? "Enviando..." : "Receber Checklist Grátis"}
             {!isSubmitting && <Mail className="ml-2 h-4 w-4" />}
           </Button>
@@ -84,7 +62,6 @@ const LeadForm = () => {
           💌 Não enviamos spam. Seus dados estão protegidos.
         </p>
       </DialogContent>
-    </Dialog>
-  );
+    </Dialog>;
 };
 export default LeadForm;
