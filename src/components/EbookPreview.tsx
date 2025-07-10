@@ -2,14 +2,11 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Eye, ArrowLeft, ArrowRight, X } from "lucide-react";
-
 const EbookPreview = () => {
   const [currentPage, setCurrentPage] = useState(0);
-  
-  const pages = [
-    {
-      title: "Índice",
-      content: `
+  const pages = [{
+    title: "Índice",
+    content: `
         CAPÍTULO 1: O que é uma marca?
         • Diferença entre marca e produto
         • Por que a marca vale mais que tudo
@@ -27,10 +24,9 @@ const EbookPreview = () => {
         • Os 7 erros que mais rejeitam pedidos
         • Como escolher a classe correta
       `
-    },
-    {
-      title: "Capítulo 1: O que é uma marca?",
-      content: `
+  }, {
+    title: "Capítulo 1: O que é uma marca?",
+    content: `
         Uma marca não é apenas um nome ou logo. É o conjunto de elementos que identifica e diferencia seus produtos ou serviços no mercado.
         
         ELEMENTOS DE UMA MARCA:
@@ -49,10 +45,9 @@ const EbookPreview = () => {
         • Status social
         • Garantia de qualidade
       `
-    },
-    {
-      title: "Capítulo 2: Os riscos de não registrar",
-      content: `
+  }, {
+    title: "Capítulo 2: Os riscos de não registrar",
+    content: `
         CASO REAL: Padaria do João
         
         João tinha uma padaria famosa em sua cidade há 15 anos. Nunca registrou a marca "Pão Quentinho". 
@@ -70,32 +65,21 @@ const EbookPreview = () => {
         ❌ Dificuldade para vender o negócio
         ❌ Problemas com fornecedores
       `
-    }
-  ];
-
+  }];
   const nextPage = () => {
     if (currentPage < pages.length - 1) {
       setCurrentPage(currentPage + 1);
     }
   };
-
   const prevPage = () => {
     if (currentPage > 0) {
       setCurrentPage(currentPage - 1);
     }
   };
-
-  return (
-    <div className="flex justify-center mb-8">
+  return <div className="flex justify-center mb-8">
       <Dialog>
         <DialogTrigger asChild>
-          <Button 
-            variant="outline" 
-            className="border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white transition-colors"
-          >
-            <Eye className="mr-2 h-4 w-4" />
-            👀 Prévia do Ebook
-          </Button>
+          
         </DialogTrigger>
         <DialogContent className="max-w-4xl max-h-[80vh] overflow-hidden">
           <div className="flex items-center justify-between mb-4">
@@ -114,12 +98,7 @@ const EbookPreview = () => {
           </div>
           
           <div className="flex justify-between items-center mt-4">
-            <Button 
-              variant="outline" 
-              onClick={prevPage} 
-              disabled={currentPage === 0}
-              className="flex items-center"
-            >
+            <Button variant="outline" onClick={prevPage} disabled={currentPage === 0} className="flex items-center">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Anterior
             </Button>
@@ -128,12 +107,7 @@ const EbookPreview = () => {
               {currentPage + 1} / {pages.length}
             </span>
             
-            <Button 
-              variant="outline" 
-              onClick={nextPage} 
-              disabled={currentPage === pages.length - 1}
-              className="flex items-center"
-            >
+            <Button variant="outline" onClick={nextPage} disabled={currentPage === pages.length - 1} className="flex items-center">
               Próxima
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
@@ -146,8 +120,6 @@ const EbookPreview = () => {
           </div>
         </DialogContent>
       </Dialog>
-    </div>
-  );
+    </div>;
 };
-
 export default EbookPreview;
