@@ -77,7 +77,7 @@ const Hero = () => {
                       {/* Ebook Cover */}
                       <div className="w-full h-full">
                         <img
-                          src="/lovable-uploads/a35e7b1b-9593-4f3e-972d-6de3849e5e51.png"
+                          src="/lovable-uploads/Capa Ebook.JPG"
                           alt="Guia Completo: Registro de Marca no Brasil"
                           className="w-full h-full object-cover rounded-lg"
                           loading="eager"
