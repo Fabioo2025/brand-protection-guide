@@ -76,12 +76,13 @@ const Hero = () => {
                     <div className="relative bg-gradient-to-br from-brand-blue-900 to-brand-blue-950 overflow-hidden rounded-lg aspect-[3/4] flex items-center justify-center">
                       {/* Ebook Cover */}
                       <div className="w-full h-full">
-                        <ImageOptimized
+                        <img
                           src="/lovable-uploads/a35e7b1b-9593-4f3e-972d-6de3849e5e51.png"
                           alt="Guia Completo: Registro de Marca no Brasil"
                           className="w-full h-full object-cover rounded-lg"
-                          priority={true}
                           loading="eager"
+                          fetchPriority="high"
+                          decoding="sync"
                         />
                       </div>
                     </div>

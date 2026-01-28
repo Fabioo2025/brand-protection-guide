@@ -10,17 +10,7 @@ const Pricing = () => {
   const [isProcessing, setIsProcessing] = useState(false);
   const isMobile = useIsMobile();
   const handlePurchase = () => {
-    setIsProcessing(true);
-
-    // Simulate payment processing
-    setTimeout(() => {
-      setIsProcessing(false);
-      toast({
-        title: "Compra simulada com sucesso!",
-        description: "Este é um exemplo de compra. Para implementar o Stripe, será necessário configurar uma conta.",
-        variant: "default"
-      });
-    }, 1500);
+    window.open("https://pay.hotmart.com/R104037913N", "_blank");
   };
   return <section id="checkout" className="py-16 md:py-24 bg-gradient-to-br from-brand-blue-950 via-brand-blue-900 to-brand-blue-800 text-white relative overflow-hidden">
       {/* Animated background elements */}
@@ -58,10 +48,10 @@ const Pricing = () => {
                 <div className="mt-4 md:mt-0 text-center">
                   <div className="flex items-center">
                     <span className="text-gray-400 line-through text-lg mr-2">R$ 149,90</span>
-                    <span className="bg-green-100 text-green-800 text-sm font-semibold px-2 py-1 rounded">-67%</span>
+                    <span className="bg-green-100 text-green-800 text-sm font-semibold px-2 py-1 rounded">-73%</span>
                   </div>
                   <div className="text-3xl font-bold text-brand-blue-950">
-                    R$ 49,90
+                    R$ 39,90
                   </div>
                   <div className="text-sm text-gray-500">Pagamento único</div>
                 </div>
